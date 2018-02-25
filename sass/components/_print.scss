@@ -8,6 +8,9 @@
     @include box-shadow(none !important);
     text-shadow: none !important;
   }
+  body {
+    max-width: default;
+  }
   html {
     font-size: 80%;
   }
