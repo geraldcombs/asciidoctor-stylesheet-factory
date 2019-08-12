@@ -64,4 +64,17 @@ p, pre {
   border: 0.5px rgba(0, 0, 0, 0.5) solid;
 }
 
+.guibutton {
+  padding: 0.1em;
+  border: 0.5px rgba(0, 0, 0, 0.5) solid;
+  border-radius: 4px;
+}
+
+.keycap {
+  padding: 0.1em;
+  border: 0.5px rgba(0, 0, 0, 0.5) solid;
+  box-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
 @import "components/print";
