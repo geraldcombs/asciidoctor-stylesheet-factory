@@ -59,7 +59,7 @@ p, pre {
   @include single-box-shadow($panel-border-color, 0, 1px, 4px);
 }
 
-.guimenu, .guimenuitem {
+.guimenu, .guisubmenu, .guimenuitem {
   padding: .1em .3em .1em .3em;
   border: 0.5px rgba(0, 0, 0, 0.5) solid;
 }
