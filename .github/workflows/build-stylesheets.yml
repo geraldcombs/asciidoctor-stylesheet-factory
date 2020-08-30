@@ -1,0 +1,29 @@
+# Run build-stylesheet.sh and artifactify the result.
+
+name: Build stylesheets
+
+on:
+  push:
+
+jobs:
+  build:
+    # https://docs.github.com/en/actions/reference/software-installed-on-github-hosted-runners
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE.
+      - uses: actions/checkout@v2
+
+      - name: Build the stylesheets
+        run: |
+          sudo apt-get install -y ruby-bundler
+          bundle
+          npm i
+          ./build-stylesheet.sh
+          compass compile
+          cp -v asciidoctor{,.min}.css stylesheets/
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: stylesheets
+          path: stylesheets
