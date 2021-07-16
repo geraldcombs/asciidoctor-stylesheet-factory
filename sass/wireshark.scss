@@ -42,6 +42,18 @@ p, pre {
   margin-bottom: 1.25rem;
 }
 
+// Admonition image sizes. Docbook XSL uses .note &c, Asciidoctor uses
+// .admonitionblock and sets max-width: none for us.
+.note, .tip, .important, .caution, .warning {
+  td img {
+    max-width: none;
+    min-width: 2em;
+  }
+}
+.admonitionblock > table td.icon img {
+  min-width: 2em;
+}
+
 // restore font size in sidebar block and regular table cells
 .sidebarblock p, .sidebarblock dt, .sidebarblock td.content, p.tableblock {
   font-size: 1em;
